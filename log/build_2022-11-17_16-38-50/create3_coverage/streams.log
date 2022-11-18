@@ -1,0 +1,114 @@
+[0.018s] Invoking command in '/home/awasch/work/src/create3_examples/build/create3_coverage': AMENT_PREFIX_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs:/home/awasch/create3_examples_ws/install/create3_lidar:/home/awasch/create3_examples_ws/install/create3_coverage:/home/awasch/create3_examples_ws/install/create3_examples_msgs:/home/awasch/create3_examples_ws/install/create3_teleop:/home/awasch/create3_examples_ws/install/create3_examples_py:/opt/ros/galactic LD_LIBRARY_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/awasch/work/src/create3_examples/create3_coverage -DCMAKE_INSTALL_PREFIX=/home/awasch/work/src/create3_examples/install/create3_coverage
+[0.089s] -- The C compiler identification is GNU 9.4.0
+[0.157s] -- The CXX compiler identification is GNU 9.4.0
+[0.162s] -- Check for working C compiler: /usr/bin/cc
+[0.253s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.254s] -- Detecting C compiler ABI info
+[0.346s] -- Detecting C compiler ABI info - done
+[0.359s] -- Detecting C compile features
+[0.360s] -- Detecting C compile features - done
+[0.364s] -- Check for working CXX compiler: /usr/bin/c++
+[0.468s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.470s] -- Detecting CXX compiler ABI info
+[0.579s] -- Detecting CXX compiler ABI info - done
+[0.601s] -- Detecting CXX compile features
+[0.601s] -- Detecting CXX compile features - done
+[0.606s] -- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.637s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.638s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.759s] -- Found create3_examples_msgs: 0.0.1 (/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/cmake)
+[0.813s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.823s] -- Found rosidl_adapter: 2.2.2 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.939s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.974s] -- Found FastRTPS: /opt/ros/galactic/include  
+[1.075s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.259s] -- Found geometry_msgs: 2.2.4 (/opt/ros/galactic/share/geometry_msgs/cmake)
+[1.336s] -- Found irobot_create_msgs: 1.2.4 (/opt/ros/galactic/share/irobot_create_msgs/cmake)
+[1.530s] -- Found nav_msgs: 2.2.4 (/opt/ros/galactic/share/nav_msgs/cmake)
+[1.620s] -- Found rclcpp: 9.2.1 (/opt/ros/galactic/share/rclcpp/cmake)
+[1.684s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[1.691s] -- Found rmw_fastrtps_cpp: 5.0.2 (/opt/ros/galactic/share/rmw_fastrtps_cpp/cmake)
+[1.834s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.835s] -- Looking for pthread.h
+[1.926s] -- Looking for pthread.h - found
+[1.927s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.022s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.023s] -- Looking for pthread_create in pthreads
+[2.103s] -- Looking for pthread_create in pthreads - not found
+[2.103s] -- Looking for pthread_create in pthread
+[2.192s] -- Looking for pthread_create in pthread - found
+[2.195s] -- Found Threads: TRUE  
+[2.369s] -- Found rclcpp_action: 9.2.1 (/opt/ros/galactic/share/rclcpp_action/cmake)
+[2.430s] -- Found tf2_geometry_msgs: 0.17.4 (/opt/ros/galactic/share/tf2_geometry_msgs/cmake)
+[2.447s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/galactic/share/eigen3_cmake_module/cmake)
+[2.452s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[2.929s] -- Found ament_lint_auto: 0.10.7 (/opt/ros/galactic/share/ament_lint_auto/cmake)
+[3.021s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.021s] -- Configured cppcheck include dirs: /home/awasch/work/src/create3_examples/create3_coverage/include
+[3.022s] -- Configured cppcheck exclude dirs and/or files: 
+[3.023s] -- Added test 'lint_cmake' to check CMake code style
+[3.026s] -- Added test 'uncrustify' to check C / C++ code style
+[3.026s] -- Configured uncrustify additional arguments: 
+[3.027s] -- Added test 'xmllint' to check XML markup files
+[3.036s] -- Configuring done
+[3.064s] -- Generating done
+[3.067s] -- Build files have been written to: /home/awasch/work/src/create3_examples/build/create3_coverage
+[3.076s] Invoked command in '/home/awasch/work/src/create3_examples/build/create3_coverage' returned '0': AMENT_PREFIX_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs:/home/awasch/create3_examples_ws/install/create3_lidar:/home/awasch/create3_examples_ws/install/create3_coverage:/home/awasch/create3_examples_ws/install/create3_examples_msgs:/home/awasch/create3_examples_ws/install/create3_teleop:/home/awasch/create3_examples_ws/install/create3_examples_py:/opt/ros/galactic LD_LIBRARY_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/awasch/work/src/create3_examples/create3_coverage -DCMAKE_INSTALL_PREFIX=/home/awasch/work/src/create3_examples/install/create3_coverage
+[3.079s] Invoking command in '/home/awasch/work/src/create3_examples/build/create3_coverage': AMENT_PREFIX_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs:/home/awasch/create3_examples_ws/install/create3_lidar:/home/awasch/create3_examples_ws/install/create3_coverage:/home/awasch/create3_examples_ws/install/create3_examples_msgs:/home/awasch/create3_examples_ws/install/create3_teleop:/home/awasch/create3_examples_ws/install/create3_examples_py:/opt/ros/galactic LD_LIBRARY_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/awasch/work/src/create3_examples/build/create3_coverage -- -j8 -l8
+[3.137s] [35m[1mScanning dependencies of target create3_coverage_core[0m
+[3.270s] [  8%] [32mBuilding CXX object CMakeFiles/create3_coverage_core.dir/src/behaviors/drive-straight-behavior.cpp.o[0m
+[3.271s] [ 16%] [32mBuilding CXX object CMakeFiles/create3_coverage_core.dir/src/behaviors/dock-behavior.cpp.o[0m
+[3.275s] [ 25%] [32mBuilding CXX object CMakeFiles/create3_coverage_core.dir/src/behaviors/reflex-behavior.cpp.o[0m
+[3.275s] [ 33%] [32mBuilding CXX object CMakeFiles/create3_coverage_core.dir/src/behaviors/rotate-behavior.cpp.o[0m
+[3.275s] [ 41%] [32mBuilding CXX object CMakeFiles/create3_coverage_core.dir/src/behaviors/spiral-behavior.cpp.o[0m
+[3.276s] [ 50%] [32mBuilding CXX object CMakeFiles/create3_coverage_core.dir/src/behaviors/undock-behavior.cpp.o[0m
+[3.276s] [ 58%] [32mBuilding CXX object CMakeFiles/create3_coverage_core.dir/src/behaviors/utils.cpp.o[0m
+[3.287s] [ 66%] [32mBuilding CXX object CMakeFiles/create3_coverage_core.dir/src/coverage_state_machine.cpp.o[0m
+[4.812s] [ 75%] [32mBuilding CXX object CMakeFiles/create3_coverage_core.dir/src/create3_coverage_node.cpp.o[0m
+[26.688s] [ 83%] [32m[1mLinking CXX shared library libcreate3_coverage_core.so[0m
+[28.302s] [ 83%] Built target create3_coverage_core
+[28.318s] [35m[1mScanning dependencies of target create3_coverage[0m
+[28.389s] [ 91%] [32mBuilding CXX object CMakeFiles/create3_coverage.dir/src/main.cpp.o[0m
+[31.615s] [100%] [32m[1mLinking CXX executable create3_coverage[0m
+[32.160s] [100%] Built target create3_coverage
+[32.175s] Invoked command in '/home/awasch/work/src/create3_examples/build/create3_coverage' returned '0': AMENT_PREFIX_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs:/home/awasch/create3_examples_ws/install/create3_lidar:/home/awasch/create3_examples_ws/install/create3_coverage:/home/awasch/create3_examples_ws/install/create3_examples_msgs:/home/awasch/create3_examples_ws/install/create3_teleop:/home/awasch/create3_examples_ws/install/create3_examples_py:/opt/ros/galactic LD_LIBRARY_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/awasch/work/src/create3_examples/build/create3_coverage -- -j8 -l8
+[32.236s] Invoking command in '/home/awasch/work/src/create3_examples/build/create3_coverage': AMENT_PREFIX_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs:/home/awasch/create3_examples_ws/install/create3_lidar:/home/awasch/create3_examples_ws/install/create3_coverage:/home/awasch/create3_examples_ws/install/create3_examples_msgs:/home/awasch/create3_examples_ws/install/create3_teleop:/home/awasch/create3_examples_ws/install/create3_examples_py:/opt/ros/galactic LD_LIBRARY_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/awasch/work/src/create3_examples/build/create3_coverage
+[32.249s] -- Install configuration: ""
+[32.249s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/lib/libcreate3_coverage_core.so
+[32.270s] -- Set runtime path of "/home/awasch/work/src/create3_examples/install/create3_coverage/lib/libcreate3_coverage_core.so" to ""
+[32.270s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/lib/create3_coverage/create3_coverage
+[32.271s] -- Set runtime path of "/home/awasch/work/src/create3_examples/install/create3_coverage/lib/create3_coverage/create3_coverage" to ""
+[32.271s] -- Up-to-date: /home/awasch/work/src/create3_examples/install/create3_coverage/include/
+[32.271s] -- Up-to-date: /home/awasch/work/src/create3_examples/install/create3_coverage/include//create3_coverage
+[32.272s] -- Up-to-date: /home/awasch/work/src/create3_examples/install/create3_coverage/include//create3_coverage/behaviors
+[32.272s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/include//create3_coverage/behaviors/behavior.hpp
+[32.272s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/include//create3_coverage/behaviors/dock-behavior.hpp
+[32.272s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/include//create3_coverage/behaviors/undock-behavior.hpp
+[32.272s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/include//create3_coverage/behaviors/rotate-behavior.hpp
+[32.272s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/include//create3_coverage/behaviors/spiral-behavior.hpp
+[32.273s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/include//create3_coverage/behaviors/reflex-behavior.hpp
+[32.273s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/include//create3_coverage/behaviors/drive-straight-behavior.hpp
+[32.273s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/include//create3_coverage/create3_coverage_node.hpp
+[32.273s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/include//create3_coverage/state.hpp
+[32.274s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/include//create3_coverage/coverage_state_machine.hpp
+[32.274s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/environment/library_path.sh
+[32.275s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/environment/library_path.dsv
+[32.275s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/ament_index/resource_index/package_run_dependencies/create3_coverage
+[32.275s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/ament_index/resource_index/parent_prefix_path/create3_coverage
+[32.276s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/environment/ament_prefix_path.sh
+[32.276s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/environment/ament_prefix_path.dsv
+[32.276s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/environment/path.sh
+[32.277s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/environment/path.dsv
+[32.277s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/local_setup.bash
+[32.277s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/local_setup.sh
+[32.278s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/local_setup.zsh
+[32.278s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/local_setup.dsv
+[32.278s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/package.dsv
+[32.278s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/ament_index/resource_index/packages/create3_coverage
+[32.279s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/cmake/ament_cmake_export_include_directories-extras.cmake
+[32.279s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/cmake/ament_cmake_export_libraries-extras.cmake
+[32.279s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/cmake/ament_cmake_export_dependencies-extras.cmake
+[32.280s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/cmake/create3_coverageConfig.cmake
+[32.280s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/cmake/create3_coverageConfig-version.cmake
+[32.280s] -- Installing: /home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/package.xml
+[32.286s] Invoked command in '/home/awasch/work/src/create3_examples/build/create3_coverage' returned '0': AMENT_PREFIX_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs:/home/awasch/create3_examples_ws/install/create3_lidar:/home/awasch/create3_examples_ws/install/create3_coverage:/home/awasch/create3_examples_ws/install/create3_examples_msgs:/home/awasch/create3_examples_ws/install/create3_teleop:/home/awasch/create3_examples_ws/install/create3_examples_py:/opt/ros/galactic LD_LIBRARY_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/awasch/work/src/create3_examples/build/create3_coverage

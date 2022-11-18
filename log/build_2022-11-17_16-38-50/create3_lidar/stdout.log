@@ -1,0 +1,44 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/awasch/work/src/create3_examples/build/create3_lidar
+-- Install configuration: ""
+-- Up-to-date: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/launch
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/launch/sensors_launch.py
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/launch/slam_toolbox_launch.py
+-- Up-to-date: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/config
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/config/mapper_params_online_async.yaml
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/config/rplidar_node.yaml
+-- Up-to-date: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/rviz
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/rviz/create3_lidar.rviz
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/ament_index/resource_index/package_run_dependencies/create3_lidar
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/ament_index/resource_index/parent_prefix_path/create3_lidar
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/environment/ament_prefix_path.sh
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/environment/ament_prefix_path.dsv
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/environment/path.sh
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/environment/path.dsv
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/local_setup.bash
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/local_setup.sh
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/local_setup.zsh
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/local_setup.dsv
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/package.dsv
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/ament_index/resource_index/packages/create3_lidar
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/cmake/create3_lidarConfig.cmake
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/cmake/create3_lidarConfig-version.cmake
+-- Installing: /home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/package.xml

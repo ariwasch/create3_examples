@@ -1,0 +1,4 @@
+Invoking command in '/home/awasch/work/src/create3_examples/build/create3_lidar': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/awasch/work/src/create3_examples/build/create3_lidar -- -j8 -l8
+Invoked command in '/home/awasch/work/src/create3_examples/build/create3_lidar' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/awasch/work/src/create3_examples/build/create3_lidar -- -j8 -l8
+Invoking command in '/home/awasch/work/src/create3_examples/build/create3_lidar': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/awasch/work/src/create3_examples/build/create3_lidar
+Invoked command in '/home/awasch/work/src/create3_examples/build/create3_lidar' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/awasch/work/src/create3_examples/build/create3_lidar

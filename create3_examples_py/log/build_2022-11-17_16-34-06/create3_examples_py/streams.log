@@ -1,0 +1,45 @@
+[0.849s] Invoking command in '/home/awasch/work/src/create3_examples/create3_examples_py': PYTHONPATH=/home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/create3_examples_py build --build-base /home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/build install --prefix /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py --record /home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/install.log --single-version-externally-managed
+[1.163s] running egg_info
+[1.163s] creating build/create3_examples_py/create3_examples_py.egg-info
+[1.163s] writing build/create3_examples_py/create3_examples_py.egg-info/PKG-INFO
+[1.164s] writing dependency_links to build/create3_examples_py/create3_examples_py.egg-info/dependency_links.txt
+[1.164s] writing entry points to build/create3_examples_py/create3_examples_py.egg-info/entry_points.txt
+[1.164s] writing requirements to build/create3_examples_py/create3_examples_py.egg-info/requires.txt
+[1.164s] writing top-level names to build/create3_examples_py/create3_examples_py.egg-info/top_level.txt
+[1.166s] writing manifest file 'build/create3_examples_py/create3_examples_py.egg-info/SOURCES.txt'
+[1.201s] reading manifest file 'build/create3_examples_py/create3_examples_py.egg-info/SOURCES.txt'
+[1.202s] writing manifest file 'build/create3_examples_py/create3_examples_py.egg-info/SOURCES.txt'
+[1.202s] running build
+[1.202s] running build_py
+[1.203s] creating /home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/build
+[1.203s] creating /home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/build/lib
+[1.203s] creating /home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/build/lib/create3_examples_py
+[1.203s] copying create3_examples_py/__init__.py -> /home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/build/lib/create3_examples_py
+[1.203s] creating /home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/build/lib/create3_examples_py/dance
+[1.203s] copying create3_examples_py/dance/dance_choreograph.py -> /home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/build/lib/create3_examples_py/dance
+[1.204s] copying create3_examples_py/dance/__init__.py -> /home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/build/lib/create3_examples_py/dance
+[1.204s] copying create3_examples_py/dance/create3_dance.py -> /home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/build/lib/create3_examples_py/dance
+[1.204s] running install
+[1.205s] running install_lib
+[1.206s] creating /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/lib/python3.8/site-packages/create3_examples_py
+[1.206s] copying /home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/build/lib/create3_examples_py/__init__.py -> /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/lib/python3.8/site-packages/create3_examples_py
+[1.206s] creating /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/lib/python3.8/site-packages/create3_examples_py/dance
+[1.207s] copying /home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/build/lib/create3_examples_py/dance/dance_choreograph.py -> /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/lib/python3.8/site-packages/create3_examples_py/dance
+[1.207s] copying /home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/build/lib/create3_examples_py/dance/__init__.py -> /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/lib/python3.8/site-packages/create3_examples_py/dance
+[1.207s] copying /home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/build/lib/create3_examples_py/dance/create3_dance.py -> /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/lib/python3.8/site-packages/create3_examples_py/dance
+[1.208s] byte-compiling /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/lib/python3.8/site-packages/create3_examples_py/__init__.py to __init__.cpython-38.pyc
+[1.210s] byte-compiling /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/lib/python3.8/site-packages/create3_examples_py/dance/dance_choreograph.py to dance_choreograph.cpython-38.pyc
+[1.212s] byte-compiling /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/lib/python3.8/site-packages/create3_examples_py/dance/__init__.py to __init__.cpython-38.pyc
+[1.212s] byte-compiling /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/lib/python3.8/site-packages/create3_examples_py/dance/create3_dance.py to create3_dance.cpython-38.pyc
+[1.213s] running install_data
+[1.213s] creating /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/share/ament_index
+[1.214s] creating /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/share/ament_index/resource_index
+[1.214s] creating /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/share/ament_index/resource_index/packages
+[1.214s] copying resource/create3_examples_py -> /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/share/ament_index/resource_index/packages
+[1.214s] copying package.xml -> /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/share/create3_examples_py
+[1.214s] running install_egg_info
+[1.217s] Copying build/create3_examples_py/create3_examples_py.egg-info to /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/lib/python3.8/site-packages/create3_examples_py-0.0.1-py3.8.egg-info
+[1.218s] running install_scripts
+[1.244s] Installing create3_dance script to /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/lib/create3_examples_py
+[1.244s] writing list of installed files to '/home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/install.log'
+[1.270s] Invoked command in '/home/awasch/work/src/create3_examples/create3_examples_py' returned '0': PYTHONPATH=/home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/create3_examples_py build --build-base /home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/build install --prefix /home/awasch/work/src/create3_examples/create3_examples_py/install/create3_examples_py --record /home/awasch/work/src/create3_examples/create3_examples_py/build/create3_examples_py/install.log --single-version-externally-managed

@@ -1,6 +1,7 @@
 # Copyright 2021 iRobot Corporation. All Rights Reserved.
 
 import math
+import tty, sys, termios
 
 import rclpy
 from rclpy.node import Node
@@ -107,6 +108,7 @@ class DanceCommandPublisher(Node):
         self.dance_choreographer = dance_choreographer
         self.lights_publisher = self.create_publisher(LightringLeds, 'cmd_lightring', 10)
         self.vel_publisher = self.create_publisher(Twist, 'cmd_vel', 10)
+        
         timer_period = 0.05  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.last_twist = Twist()
@@ -155,37 +157,72 @@ class DanceCommandPublisher(Node):
             else:
                 return
         # get actions from dance_choreographer given time
-        next_actions = self.dance_choreographer.get_next_actions(current_time)
-        twist = self.last_twist
-        lightring = self.last_lightring
-        for next_action in next_actions:
-            if isinstance(next_action, Move):
-                twist = Twist()
-                twist.linear.x = next_action.x
-                twist.angular.z = next_action.theta
-                self.last_twist = twist
-                self.get_logger().info('Time %f New move action: %f, %f' % (current_time.nanoseconds / float(1e9), twist.linear.x, twist.angular.z))
-            elif isinstance(next_action, Lights):
-                lightring = LightringLeds()
-                lightring.override_system = True
-                lightring.leds = next_action.led_colors
-                self.last_lightring = lightring
-                self.get_logger().info('Time %f New lights action, first led (%d,%d,%d)' % (current_time.nanoseconds / float(1e9), lightring.leds[0].red, lightring.leds[0].green, lightring.leds[0].blue))
-            else:
-                twist = Twist()
-                twist.linear.x = 0.0
-                twist.angular.z = 0.0
-                self.last_twist = twist
-                lightring = LightringLeds()
-                lightring.override_system = False
-                self.last_lightring = lightring
-                self.finished = True
-                self.get_logger().info('Time %f Finished Dance Sequence' % (current_time.nanoseconds / float(1e9)))
-                raise FinishedDance
+        # next_actions = self.dance_choreographer.get_next_actions(current_time)
+        # twist = self.last_twist
 
-        lightring.header.stamp = current_time.to_msg()
-        self.vel_publisher.publish(twist)
-        self.lights_publisher.publish(lightring)
+        try:
+            filedescriptors = termios.tcgetattr(sys.stdin)
+            tty.setcbreak(sys.stdin)
+            x = 0
+            x=sys.stdin.read(1)[0]
+
+        # lightring = self.last_lightring
+            move_cmd = Twist()
+
+            # value = input("s")
+            self.get_logger().info(x)
+
+            if(x == "w"):
+                move_cmd.linear.x = -100.0
+            elif(x == "s"):
+                move_cmd.linear.x = 100.0
+            # else:
+            #     move_cmd.linear.x = 0.0
+
+            if(x == "a"):
+                move_cmd.angular.z = -100.0
+                # move_cmd.linear.x = 1.0
+            elif(x == "d"):
+                move_cmd.angular.z = 100.0
+            # else:
+            #     move_cmd.angular.z = 0.0
+
+
+            self.get_logger().info('Time %f New move action: %f, %f' % (current_time.nanoseconds / float(1e9), move_cmd.linear.x, move_cmd.angular.z))
+
+            self.vel_publisher.publish(move_cmd)
+            raise FinishedDance
+        except Exception as e:
+            self.get_logger().info('Set Params Service call failed %r' % (e,))
+
+        # for next_action in next_actions:
+        #     if isinstance(next_action, Move):
+        #         twist = Twist()
+        #         # twist.linear.x = next_action.x
+        #         # twist.angular.z = next_action.theta
+        #         # self.last_twist = twist
+        #         # self.get_logger().info('Time %f New move action: %f, %f' % (current_time.nanoseconds / float(1e9), twist.linear.x, twist.angular.z))
+        #     elif isinstance(next_action, Lights):
+        #         lightring = LightringLeds()
+        #         lightring.override_system = True
+        #         lightring.leds = next_action.led_colors
+        #         self.last_lightring = lightring
+        #         self.get_logger().info('Time %f New lights action, first led (%d,%d,%d)' % (current_time.nanoseconds / float(1e9), lightring.leds[0].red, lightring.leds[0].green, lightring.leds[0].blue))
+        #     else:
+        #         twist = Twist()
+        #         twist.linear.x = 0.0
+        #         twist.angular.z = 0.0
+        #         self.last_twist = twist
+        #         lightring = LightringLeds()
+        #         lightring.override_system = False
+        #         self.last_lightring = lightring
+        #         self.finished = True
+        #         self.get_logger().info('Time %f Finished Dance Sequence' % (current_time.nanoseconds / float(1e9)))
+        #         raise FinishedDance
+
+        # lightring.header.stamp = current_time.to_msg()
+        # self.vel_publisher.publish(twist)
+        # self.lights_publisher.publish(lightring)
 
     # Set safety_override to backup_only so robot can backup during dance sequence
     def send_params_request(self):
