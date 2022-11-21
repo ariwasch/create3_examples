@@ -13,6 +13,7 @@ from rcl_interfaces.msg import ParameterType
 from rcl_interfaces.msg import ParameterValue
 from rcl_interfaces.srv import SetParameters
 
+from std_msgs.msg import String
 from geometry_msgs.msg import Twist
 from irobot_create_msgs.msg import LedColor
 from irobot_create_msgs.msg import LightringLeds
@@ -110,6 +111,7 @@ class DanceCommandPublisher(Node):
         self.dance_choreographer = dance_choreographer
         self.lights_publisher = self.create_publisher(LightringLeds, 'cmd_lightring', 10)
         self.vel_publisher = self.create_publisher(Twist, 'cmd_vel', 10)
+        self.arduino_publisher = self.create_publisher(String, 'move', 10)
         
         self.subscription = self.create_subscription(
             Joy,
@@ -151,6 +153,10 @@ class DanceCommandPublisher(Node):
                 self.vel_publisher.publish(move_cmd)
 
                 self.get_logger().info('I heard: "2222%s"' % msg.axes[2])
+                
+                msgs = ['lift', 'lower', 'push', 'pull', 'connect', 'disconnect']
+                for i in range(len(msgs)):
+                    if (buttons[i]): self.arduino_publisher.publish(msgs[i])
 
             except Exception as e:
                 self.get_logger().info('Set Params Service call failed %r' % (e,))
@@ -177,7 +183,7 @@ class DanceCommandPublisher(Node):
                 self.get_logger().info('Finished params set, start dance at time %f' % (current_time.nanoseconds / float(1e9)))
                 self.dance_choreographer.start_dance(current_time)
             # Check is subscribers are ready
-            elif self.vel_publisher.get_subscription_count() > 0 and self.lights_publisher.get_subscription_count() > 0:
+            elif self.vel_publisher.get_subscription_count() > 0 and self.lights_publisher.get_subscription_count() > 0 and self.arduino_publisher.get_subscription_count() > 0:
                 self.get_logger().info('Subscribers connected, send safety_override param at time %f' % (current_time.nanoseconds / float(1e9)))
                 self.send_params_request()
                 self.wait_on_params = True
