@@ -1,0 +1,5 @@
+  File "/home/awasch/work/src/create3_examples/install/create3_examples_py/lib/python3.8/site-packages/create3_examples_py/dance/create3_dance.py", line 32
+    ]
+    ^
+SyntaxError: closing parenthesis ']' does not match opening parenthesis '(' on line 31
+

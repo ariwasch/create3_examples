@@ -1,0 +1,5 @@
+  File "/home/awasch/work/src/create3_examples/install/create3_examples_py/lib/python3.8/site-packages/create3_examples_py/dance/dance_choreograph.py", line 145
+    move_cmd.linear.x = 100.0 * msg.axes[2]s
+                                           ^
+SyntaxError: invalid syntax
+

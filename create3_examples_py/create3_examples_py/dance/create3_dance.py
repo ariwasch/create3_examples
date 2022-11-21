@@ -3,6 +3,22 @@
 import rclpy
 import sys
 from create3_examples_py.dance import dance_choreograph as dc
+from sensor_msgs.msg import Joy
+from rclpy.node import Node
+
+class MinimalSubscriber(Node):
+
+    def __init__(self):
+        super().__init__('minimal_subscriber')
+        self.subscription = self.create_subscription(
+            Joy,
+            '/joy',
+            self.listener_callback,
+            10)
+        self.subscription  # prevent unused variable warning
+
+    def listener_callback(self, msg):
+        self.get_logger().info('I heard: "%s"' % msg.axes[2])
 
 def main(args=None):
     rclpy.init(args=args)
@@ -20,13 +36,17 @@ def main(args=None):
     try: 
         dance_choreographer = dc.DanceChoreographer(DANCE_SEQUENCE)
         dance_publisher = dc.DanceCommandPublisher(dance_choreographer)
+
+        # joy_sub = MinimalSubscriber()
         rclpy.spin(dance_publisher)
+        # rclpy.spin(joy_sub)
+
     except dc.FinishedDance:
         print('Finished Dance')
     except KeyboardInterrupt:
         print('Caught keyboard interrupt')
-    except BaseException:
-        print('Exception in dance:', file=sys.stderr)
+    except BaseException as e:
+        print('Exception in dance:', e)
     finally:
         # Destroy the node explicitly
         # (optional - otherwise it will be done automatically
