@@ -56,7 +56,7 @@ void setup() {
   node.initNode();
   node.subscribe(moveSub);
 
-  Serial.begin(9600); // can delete when done with testing
+  Serial.begin(115200); // can delete when done with testing?
 }
 
 void loop() {
