@@ -33,7 +33,7 @@ Servo pegConnector;
 
 // ROS data and subscriber
 std_msgs::String moveMsg;
-ros::subscriber<std_msgs::String> moveSub("move", &moveSubCB);
+ros::subscriber<std_msgs::String> moveSub("move", &handleMessage);
 ros::NodeHandle node;
 
 void setup() {
