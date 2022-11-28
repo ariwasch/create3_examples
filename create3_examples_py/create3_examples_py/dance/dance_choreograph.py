@@ -18,9 +18,10 @@ from geometry_msgs.msg import Twist
 from irobot_create_msgs.msg import LedColor
 from irobot_create_msgs.msg import LightringLeds
 
-import serial
+import socket
 
-SER_PORT = "COM5"
+IP = "INSERT IP HERE" # DO IT!
+PORT = 8883
 
 class ColorPalette():
     """ Helper Class to define frequently used colors"""
@@ -136,7 +137,8 @@ class DanceCommandPublisher(Node):
         while not self.params_cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
 
-        ser = serial.Serial(SER_PORT)
+        self.client = socket.socket(self.AF_INET, socket.SOCK_STREAM)
+        self.client.connect(IP, PORT)
 
     def listener_callback(self, msg):
 
@@ -158,9 +160,9 @@ class DanceCommandPublisher(Node):
 
                 self.get_logger().info('I heard: "2222%s"' % msg.axes[2])
                 
-                msgs = ['lift!', 'lower!', 'push!', 'pull!', 'connect!', 'disconnect!']
+                msgs = ['lift!', 'lower!', 'push!', 'pull!', 'connect!', 'disconnect!', 'press!', 'release!']
                 for i in range(len(msgs)):
-                    if (buttons[i]): ser.write(msgs[i])
+                    if (buttons[i]): self.client.send(bytes(msgs[i], 'utf-8'))
 
             except Exception as e:
                 self.get_logger().info('Set Params Service call failed %r' % (e,))

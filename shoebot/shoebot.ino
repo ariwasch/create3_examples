@@ -11,20 +11,26 @@ Send any of the following through serial:
 
 #include <Servo.h>
 
-// Roller
-#define ROLLER_IN 1
-#define ROLLER_OUT 2
-#define ROLLER_SPD 3
+// Rollers
+#define ROLLER_1_IN 1
+#define ROLLER_1_OUT 2
+#define ROLLER_1_SPD 3
+#define ROLLER_2_IN 4
+#define ROLLER_2_OUT 5
+#define ROLLER_2_SPD 6
 
 // Elevator
-#define ELEVATOR_UP 4
-#define ELEVATOR_DOWN 5
-#define ELEVATOR_SPD 6
-#define PEG_CONNECTOR 7
+#define ELEVATOR_UP 7
+#define ELEVATOR_DOWN 8
+#define ELEVATOR_SPD 9
+#define PEG_CONNECTOR 10
 
 // Limit switches
-#define TOP_LIMIT 8
-#define BOTTOM_LIMIT 9
+#define TOP_LIMIT 11
+#define BOTTOM_LIMIT 12
+
+// Linear actuator
+#define ACTUATOR 13
 
 // Peg connector
 Servo pegConnector;
@@ -72,9 +78,13 @@ void lift(bool up) {
 }
 
 void intake(bool pull) {
-    digitalWrite(ROLLER_IN, pull);
-    digitalWrite(ROLLER_OUT, !pull);
-    analogWrite(ROLLER_SPD, 255);
+    digitalWrite(ROLLER_1_IN, pull);
+    digitalWrite(ROLLER_1_OUT, !pull);
+    analogWrite(ROLLER_1_SPD, 255);
+
+    digitalWrite(ROLLER_2_IN, pull);
+    digitalWrite(ROLLER_2_OUT, !pull);
+    analogWrite(ROLLER_2_SPD, 255);
 }
 
 void peg(bool conn) {
