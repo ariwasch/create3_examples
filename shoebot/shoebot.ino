@@ -53,6 +53,8 @@ void loop() {
 }
 
 void handleMessage(String message) {
+    Serial.println(message);
+  
     if (message == "lift") lift(true);
     if (message == "lower") lift(false);
     if (message == "push") intake(true);
