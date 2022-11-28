@@ -1,16 +1,14 @@
 /*
 USAGE:
-Publish any of the following to /move
-  * "lift"
-  * "lower"
-  * "push"
-  * "pull"
-  * "connect"
-  * "disconnect"
+Send any of the following through serial:
+  * "lift!"
+  * "lower!"
+  * "push!"
+  * "pull!"
+  * "connect!"
+  * "disconnect!"
 */
 
-#include <ros.h>
-#include <std_msgs/String.h>
 #include <Servo.h>
 
 // Roller
@@ -31,11 +29,6 @@ Publish any of the following to /move
 // Peg connector
 Servo pegConnector;
 
-// ROS data and subscriber
-std_msgs::String moveMsg;
-ros::subscriber<std_msgs::String> moveSub("move", &handleMessage);
-ros::NodeHandle node;
-
 void setup() {
   // Inputs
   pinMode(TOP_LIMIT, INPUT);
@@ -52,27 +45,20 @@ void setup() {
   // Servo
   pegConnector.attach(PEG_CONNECTOR);
 
-  // Set up ROS
-  node.initNode();
-  node.subscribe(moveSub);
-
   Serial.begin(115200); // can delete when done with testing?
 }
 
 void loop() {
-  node.spinOnce();
-  delay(100); // do we need delay? can we just spin in setup? all things to look into!
+  if (Serial.available()) handleMessage(Serial.readStringUntil('!'));
 }
 
-void handleMessage(const std_msgs::String message) {
-    Serial.println(message);
-  
-    if (message.data == "lift") lift(true);
-    if (message.data == "lower") lift(false);
-    if (message.data == "push") intake(true);
-    if (message.data == "pull") intake(false);
-    if (message.data == "conn") peg(true);
-    if (message.data == "disconn") peg(false);
+void handleMessage(String message) {
+    if (message == "lift") lift(true);
+    if (message == "lower") lift(false);
+    if (message == "push") intake(true);
+    if (message == "pull") intake(false);
+    if (message == "conn") peg(true);
+    if (message == "disconn") peg(false);
 }
 
 void lift(bool up) {
