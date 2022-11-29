@@ -22,20 +22,14 @@ class MinimalSubscriber(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    cp = dc.ColorPalette()
     '''
     DANCE SEQUENCE is defined as a list of pairs with 
     (time to start action in seconds, action to take)
     '''
-    DANCE_SEQUENCE = [
-        (0.0, dc.Lights([cp.green, cp.green, cp.green, cp.green, cp.green, cp.green])),
-        (22.5, dc.FinishedDance())
-        ]
 
     dance_publisher = None
     try: 
-        dance_choreographer = dc.DanceChoreographer(DANCE_SEQUENCE)
-        dance_publisher = dc.DanceCommandPublisher(dance_choreographer)
+        dance_publisher = dc.DanceCommandPublisher()
 
         # joy_sub = MinimalSubscriber()
         rclpy.spin(dance_publisher)

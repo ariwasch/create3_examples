@@ -1,0 +1,377 @@
+[0.151s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.151s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f11b4f582e0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=8, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f11b4f582e0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f11b4f58820>)
+[0.177s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.177s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.177s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.177s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.177s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.177s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.177s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/awasch/work/src/create3_examples'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(create3_coverage) by extensions ['ignore', 'ignore_ament_install']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(create3_coverage) by extension 'ignore'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(create3_coverage) by extension 'ignore_ament_install'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(create3_coverage) by extensions ['colcon_pkg']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(create3_coverage) by extension 'colcon_pkg'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(create3_coverage) by extensions ['colcon_meta']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(create3_coverage) by extension 'colcon_meta'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(create3_coverage) by extensions ['ros']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(create3_coverage) by extension 'ros'
+[0.201s] DEBUG:colcon.colcon_core.package_identification:Package 'create3_coverage' with type 'ros.ament_cmake' and name 'create3_coverage'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_msgs) by extension 'ignore'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_msgs) by extension 'ignore_ament_install'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_msgs) by extensions ['colcon_pkg']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_msgs) by extension 'colcon_pkg'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_msgs) by extensions ['colcon_meta']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_msgs) by extension 'colcon_meta'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_msgs) by extensions ['ros']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_msgs) by extension 'ros'
+[0.202s] DEBUG:colcon.colcon_core.package_identification:Package 'create3_examples_msgs' with type 'ros.ament_cmake' and name 'create3_examples_msgs'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_py) by extensions ['ignore', 'ignore_ament_install']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_py) by extension 'ignore'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_py) by extension 'ignore_ament_install'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_py) by extensions ['colcon_pkg']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_py) by extension 'colcon_pkg'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_py) by extensions ['colcon_meta']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_py) by extension 'colcon_meta'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_py) by extensions ['ros']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(create3_examples_py) by extension 'ros'
+[0.204s] DEBUG:colcon.colcon_core.package_identification:Package 'create3_examples_py' with type 'ros.ament_python' and name 'create3_examples_py'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(create3_lidar) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(create3_lidar) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(create3_lidar) by extension 'ignore_ament_install'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(create3_lidar) by extensions ['colcon_pkg']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(create3_lidar) by extension 'colcon_pkg'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(create3_lidar) by extensions ['colcon_meta']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(create3_lidar) by extension 'colcon_meta'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(create3_lidar) by extensions ['ros']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(create3_lidar) by extension 'ros'
+[0.205s] DEBUG:colcon.colcon_core.package_identification:Package 'create3_lidar' with type 'ros.ament_cmake' and name 'create3_lidar'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(create3_teleop) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(create3_teleop) by extension 'ignore'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(create3_teleop) by extension 'ignore_ament_install'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(create3_teleop) by extensions ['colcon_pkg']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(create3_teleop) by extension 'colcon_pkg'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(create3_teleop) by extensions ['colcon_meta']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(create3_teleop) by extension 'colcon_meta'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(create3_teleop) by extensions ['ros']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(create3_teleop) by extension 'ros'
+[0.206s] DEBUG:colcon.colcon_core.package_identification:Package 'create3_teleop' with type 'ros.ament_python' and name 'create3_teleop'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.207s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.207s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.207s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.207s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.207s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.231s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/awasch/work/src/create3_examples/install
+[0.233s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 279 installed packages in /opt/ros/galactic
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_msgs' build argument 'cmake_args' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_msgs' build argument 'cmake_target' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.315s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.315s] DEBUG:colcon.colcon_core.verb:Building package 'create3_examples_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/awasch/work/src/create3_examples/build/create3_examples_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/awasch/work/src/create3_examples/install/create3_examples_msgs', 'merge_install': False, 'path': '/home/awasch/work/src/create3_examples/create3_examples_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_py' build argument 'cmake_args' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_py' build argument 'cmake_target' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_py' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_py' build argument 'cmake_clean_cache' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_py' build argument 'cmake_clean_first' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_py' build argument 'cmake_force_configure' from command line to 'False'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_py' build argument 'ament_cmake_args' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_py' build argument 'catkin_cmake_args' from command line to 'None'
+[0.316s] Level 5:colcon.colcon_core.verb:set package 'create3_examples_py' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.316s] DEBUG:colcon.colcon_core.verb:Building package 'create3_examples_py' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/awasch/work/src/create3_examples/build/create3_examples_py', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/awasch/work/src/create3_examples/install/create3_examples_py', 'merge_install': False, 'path': '/home/awasch/work/src/create3_examples/create3_examples_py', 'symlink_install': False, 'test_result_base': None}
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar' build argument 'cmake_args' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar' build argument 'cmake_target' from command line to 'None'
+[0.317s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar' build argument 'cmake_clean_cache' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar' build argument 'cmake_clean_first' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar' build argument 'cmake_force_configure' from command line to 'False'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar' build argument 'ament_cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar' build argument 'catkin_cmake_args' from command line to 'None'
+[0.318s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.318s] DEBUG:colcon.colcon_core.verb:Building package 'create3_lidar' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/awasch/work/src/create3_examples/build/create3_lidar', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/awasch/work/src/create3_examples/install/create3_lidar', 'merge_install': False, 'path': '/home/awasch/work/src/create3_examples/create3_lidar', 'symlink_install': False, 'test_result_base': None}
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'create3_teleop' build argument 'cmake_args' from command line to 'None'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'create3_teleop' build argument 'cmake_target' from command line to 'None'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'create3_teleop' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'create3_teleop' build argument 'cmake_clean_cache' from command line to 'False'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'create3_teleop' build argument 'cmake_clean_first' from command line to 'False'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'create3_teleop' build argument 'cmake_force_configure' from command line to 'False'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'create3_teleop' build argument 'ament_cmake_args' from command line to 'None'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'create3_teleop' build argument 'catkin_cmake_args' from command line to 'None'
+[0.319s] Level 5:colcon.colcon_core.verb:set package 'create3_teleop' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.319s] DEBUG:colcon.colcon_core.verb:Building package 'create3_teleop' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/awasch/work/src/create3_examples/build/create3_teleop', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/awasch/work/src/create3_examples/install/create3_teleop', 'merge_install': False, 'path': '/home/awasch/work/src/create3_examples/create3_teleop', 'symlink_install': False, 'test_result_base': None}
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'create3_coverage' build argument 'cmake_args' from command line to 'None'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'create3_coverage' build argument 'cmake_target' from command line to 'None'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'create3_coverage' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'create3_coverage' build argument 'cmake_clean_cache' from command line to 'False'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'create3_coverage' build argument 'cmake_clean_first' from command line to 'False'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'create3_coverage' build argument 'cmake_force_configure' from command line to 'False'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'create3_coverage' build argument 'ament_cmake_args' from command line to 'None'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'create3_coverage' build argument 'catkin_cmake_args' from command line to 'None'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'create3_coverage' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.320s] DEBUG:colcon.colcon_core.verb:Building package 'create3_coverage' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/awasch/work/src/create3_examples/build/create3_coverage', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/awasch/work/src/create3_examples/install/create3_coverage', 'merge_install': False, 'path': '/home/awasch/work/src/create3_examples/create3_coverage', 'symlink_install': False, 'test_result_base': None}
+[0.321s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.325s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.326s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/awasch/work/src/create3_examples/create3_examples_msgs' with build type 'ament_cmake'
+[0.326s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/awasch/work/src/create3_examples/create3_examples_msgs'
+[0.332s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.333s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.333s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.344s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/awasch/work/src/create3_examples/create3_examples_py' with build type 'ament_python'
+[0.346s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_examples_py', 'ament_prefix_path')
+[0.350s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_examples_py/share/create3_examples_py/hook/ament_prefix_path.ps1'
+[0.352s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/awasch/work/src/create3_examples/install/create3_examples_py/share/create3_examples_py/hook/ament_prefix_path.dsv'
+[0.352s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_examples_py/share/create3_examples_py/hook/ament_prefix_path.sh'
+[0.355s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.356s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.363s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/awasch/work/src/create3_examples/create3_lidar' with build type 'ament_cmake'
+[0.363s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/awasch/work/src/create3_examples/create3_lidar'
+[0.365s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.365s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.374s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/awasch/work/src/create3_examples/create3_teleop' with build type 'ament_python'
+[0.375s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_teleop', 'ament_prefix_path')
+[0.378s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_teleop/share/create3_teleop/hook/ament_prefix_path.ps1'
+[0.379s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/awasch/work/src/create3_examples/install/create3_teleop/share/create3_teleop/hook/ament_prefix_path.dsv'
+[0.380s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_teleop/share/create3_teleop/hook/ament_prefix_path.sh'
+[0.383s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.383s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.403s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/awasch/work/src/create3_examples/build/create3_examples_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/awasch/work/src/create3_examples/install/create3_teleop:/home/awasch/work/src/create3_examples/install/create3_examples_py:/opt/ros/galactic /usr/bin/cmake --build /home/awasch/work/src/create3_examples/build/create3_examples_msgs -- -j8 -l8
+[0.761s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/awasch/work/src/create3_examples/create3_examples_py'
+[0.763s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.763s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.783s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/awasch/work/src/create3_examples/build/create3_lidar': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/awasch/work/src/create3_examples/install/create3_teleop:/home/awasch/work/src/create3_examples/install/create3_examples_py:/opt/ros/galactic /usr/bin/cmake --build /home/awasch/work/src/create3_examples/build/create3_lidar -- -j8 -l8
+[1.098s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/awasch/work/src/create3_examples/create3_teleop'
+[1.100s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.100s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.122s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/awasch/work/src/create3_examples/build/create3_examples_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/awasch/work/src/create3_examples/install/create3_teleop:/home/awasch/work/src/create3_examples/install/create3_examples_py:/opt/ros/galactic /usr/bin/cmake --build /home/awasch/work/src/create3_examples/build/create3_examples_msgs -- -j8 -l8
+[1.123s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/awasch/work/src/create3_examples/build/create3_lidar' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/awasch/work/src/create3_examples/install/create3_teleop:/home/awasch/work/src/create3_examples/install/create3_examples_py:/opt/ros/galactic /usr/bin/cmake --build /home/awasch/work/src/create3_examples/build/create3_lidar -- -j8 -l8
+[1.201s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/awasch/work/src/create3_examples/build/create3_lidar': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/awasch/work/src/create3_examples/install/create3_teleop:/home/awasch/work/src/create3_examples/install/create3_examples_py:/opt/ros/galactic /usr/bin/cmake --install /home/awasch/work/src/create3_examples/build/create3_lidar
+[1.213s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/awasch/work/src/create3_examples/build/create3_examples_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/awasch/work/src/create3_examples/install/create3_teleop:/home/awasch/work/src/create3_examples/install/create3_examples_py:/opt/ros/galactic /usr/bin/cmake --install /home/awasch/work/src/create3_examples/build/create3_examples_msgs
+[1.223s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create3_lidar)
+[1.225s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/awasch/work/src/create3_examples/build/create3_lidar' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/awasch/work/src/create3_examples/install/create3_teleop:/home/awasch/work/src/create3_examples/install/create3_examples_py:/opt/ros/galactic /usr/bin/cmake --install /home/awasch/work/src/create3_examples/build/create3_lidar
+[1.245s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_lidar' for CMake module files
+[1.246s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_lidar' for CMake config files
+[1.246s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_lidar', 'cmake_prefix_path')
+[1.249s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/hook/cmake_prefix_path.ps1'
+[1.250s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/hook/cmake_prefix_path.dsv'
+[1.251s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/hook/cmake_prefix_path.sh'
+[1.252s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_lidar/bin'
+[1.252s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_lidar/lib/pkgconfig/create3_lidar.pc'
+[1.252s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_lidar/lib/python3.8/site-packages'
+[1.253s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_lidar/bin'
+[1.255s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/package.ps1'
+[1.257s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/package.dsv'
+[1.258s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/package.sh'
+[1.259s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/package.bash'
+[1.261s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/package.zsh'
+[1.262s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/awasch/work/src/create3_examples/install/create3_lidar/share/colcon-core/packages/create3_lidar)
+[1.308s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create3_examples_msgs)
+[1.313s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_msgs' for CMake module files
+[1.314s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/awasch/work/src/create3_examples/build/create3_examples_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/awasch/work/src/create3_examples/install/create3_teleop:/home/awasch/work/src/create3_examples/install/create3_examples_py:/opt/ros/galactic /usr/bin/cmake --install /home/awasch/work/src/create3_examples/build/create3_examples_msgs
+[1.315s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_msgs' for CMake config files
+[1.316s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_examples_msgs', 'cmake_prefix_path')
+[1.318s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/cmake_prefix_path.ps1'
+[1.319s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/cmake_prefix_path.dsv'
+[1.320s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/cmake_prefix_path.sh'
+[1.321s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib'
+[1.322s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_examples_msgs', 'ld_library_path_lib')
+[1.324s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/ld_library_path_lib.ps1'
+[1.325s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/ld_library_path_lib.dsv'
+[1.326s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/ld_library_path_lib.sh'
+[1.326s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/bin'
+[1.326s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib/pkgconfig/create3_examples_msgs.pc'
+[1.327s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib/python3.8/site-packages'
+[1.327s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_examples_msgs', 'pythonpath')
+[1.330s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/pythonpath.ps1'
+[1.331s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/pythonpath.dsv'
+[1.331s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/pythonpath.sh'
+[1.332s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/bin'
+[1.336s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/package.ps1'
+[1.337s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/package.dsv'
+[1.338s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/package.sh'
+[1.338s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/package.bash'
+[1.339s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/package.zsh'
+[1.340s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/colcon-core/packages/create3_examples_msgs)
+[1.365s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create3_lidar)
+[1.370s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_lidar' for CMake module files
+[1.379s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_lidar' for CMake config files
+[1.379s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_lidar', 'cmake_prefix_path')
+[1.382s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/hook/cmake_prefix_path.ps1'
+[1.383s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/hook/cmake_prefix_path.dsv'
+[1.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/hook/cmake_prefix_path.sh'
+[1.386s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_lidar/bin'
+[1.387s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_lidar/lib/pkgconfig/create3_lidar.pc'
+[1.387s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_lidar/lib/python3.8/site-packages'
+[1.387s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_lidar/bin'
+[1.391s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/package.ps1'
+[1.391s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/package.dsv'
+[1.392s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/package.sh'
+[1.393s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/package.bash'
+[1.394s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_lidar/share/create3_lidar/package.zsh'
+[1.394s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/awasch/work/src/create3_examples/install/create3_lidar/share/colcon-core/packages/create3_lidar)
+[1.430s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create3_examples_msgs)
+[1.434s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_msgs' for CMake module files
+[1.436s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_msgs' for CMake config files
+[1.436s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_examples_msgs', 'cmake_prefix_path')
+[1.439s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/cmake_prefix_path.ps1'
+[1.440s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/cmake_prefix_path.dsv'
+[1.441s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/cmake_prefix_path.sh'
+[1.441s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib'
+[1.442s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_examples_msgs', 'ld_library_path_lib')
+[1.445s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/ld_library_path_lib.ps1'
+[1.445s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/ld_library_path_lib.dsv'
+[1.446s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/ld_library_path_lib.sh'
+[1.446s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/bin'
+[1.447s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib/pkgconfig/create3_examples_msgs.pc'
+[1.447s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib/python3.8/site-packages'
+[1.447s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_examples_msgs', 'pythonpath')
+[1.450s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/pythonpath.ps1'
+[1.450s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/pythonpath.dsv'
+[1.451s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/hook/pythonpath.sh'
+[1.452s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/bin'
+[1.455s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/package.ps1'
+[1.456s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/package.dsv'
+[1.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/package.sh'
+[1.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/package.bash'
+[1.459s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/create3_examples_msgs/package.zsh'
+[1.460s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/awasch/work/src/create3_examples/install/create3_examples_msgs/share/colcon-core/packages/create3_examples_msgs)
+[1.461s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/awasch/work/src/create3_examples/create3_coverage' with build type 'ament_cmake'
+[1.461s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/awasch/work/src/create3_examples/create3_coverage'
+[1.464s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.464s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.496s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/awasch/work/src/create3_examples/build/create3_coverage': CMAKE_PREFIX_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs:/home/awasch/work/src/create3_examples/install/create3_lidar:/home/awasch/work/src/create3_examples/install/create3_coverage:/home/awasch/work/src/create3_examples/install/create3_teleop:/home/awasch/work/src/create3_examples/install/create3_examples_py:/opt/ros/galactic LD_LIBRARY_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib:/home/awasch/work/src/create3_examples/install/create3_coverage/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib PYTHONPATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib/python3.8/site-packages:/home/awasch/work/src/create3_examples/install/create3_teleop/lib/python3.8/site-packages:/home/awasch/work/src/create3_examples/install/create3_examples_py/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake --build /home/awasch/work/src/create3_examples/build/create3_coverage -- -j8 -l8
+[1.692s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/awasch/work/src/create3_examples/build/create3_coverage' returned '0': CMAKE_PREFIX_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs:/home/awasch/work/src/create3_examples/install/create3_lidar:/home/awasch/work/src/create3_examples/install/create3_coverage:/home/awasch/work/src/create3_examples/install/create3_teleop:/home/awasch/work/src/create3_examples/install/create3_examples_py:/opt/ros/galactic LD_LIBRARY_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib:/home/awasch/work/src/create3_examples/install/create3_coverage/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib PYTHONPATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib/python3.8/site-packages:/home/awasch/work/src/create3_examples/install/create3_teleop/lib/python3.8/site-packages:/home/awasch/work/src/create3_examples/install/create3_examples_py/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake --build /home/awasch/work/src/create3_examples/build/create3_coverage -- -j8 -l8
+[1.753s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/awasch/work/src/create3_examples/create3_teleop': PYTHONPATH=/home/awasch/work/src/create3_examples/install/create3_teleop/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/create3_teleop build --build-base /home/awasch/work/src/create3_examples/build/create3_teleop/build install --prefix /home/awasch/work/src/create3_examples/install/create3_teleop --record /home/awasch/work/src/create3_examples/build/create3_teleop/install.log --single-version-externally-managed
+[1.770s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/awasch/work/src/create3_examples/build/create3_coverage': CMAKE_PREFIX_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs:/home/awasch/work/src/create3_examples/install/create3_lidar:/home/awasch/work/src/create3_examples/install/create3_coverage:/home/awasch/work/src/create3_examples/install/create3_teleop:/home/awasch/work/src/create3_examples/install/create3_examples_py:/opt/ros/galactic LD_LIBRARY_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib:/home/awasch/work/src/create3_examples/install/create3_coverage/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib PYTHONPATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib/python3.8/site-packages:/home/awasch/work/src/create3_examples/install/create3_teleop/lib/python3.8/site-packages:/home/awasch/work/src/create3_examples/install/create3_examples_py/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake --install /home/awasch/work/src/create3_examples/build/create3_coverage
+[1.804s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/awasch/work/src/create3_examples/create3_examples_py': PYTHONPATH=/home/awasch/work/src/create3_examples/install/create3_examples_py/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/create3_examples_py build --build-base /home/awasch/work/src/create3_examples/build/create3_examples_py/build install --prefix /home/awasch/work/src/create3_examples/install/create3_examples_py --record /home/awasch/work/src/create3_examples/build/create3_examples_py/install.log --single-version-externally-managed
+[1.814s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create3_coverage)
+[1.819s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_coverage' for CMake module files
+[1.820s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/awasch/work/src/create3_examples/build/create3_coverage' returned '0': CMAKE_PREFIX_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs:/home/awasch/work/src/create3_examples/install/create3_lidar:/home/awasch/work/src/create3_examples/install/create3_coverage:/home/awasch/work/src/create3_examples/install/create3_teleop:/home/awasch/work/src/create3_examples/install/create3_examples_py:/opt/ros/galactic LD_LIBRARY_PATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib:/home/awasch/work/src/create3_examples/install/create3_coverage/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib PYTHONPATH=/home/awasch/work/src/create3_examples/install/create3_examples_msgs/lib/python3.8/site-packages:/home/awasch/work/src/create3_examples/install/create3_teleop/lib/python3.8/site-packages:/home/awasch/work/src/create3_examples/install/create3_examples_py/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages /usr/bin/cmake --install /home/awasch/work/src/create3_examples/build/create3_coverage
+[1.821s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_coverage' for CMake config files
+[1.821s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_coverage', 'cmake_prefix_path')
+[1.824s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/hook/cmake_prefix_path.ps1'
+[1.825s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/hook/cmake_prefix_path.dsv'
+[1.826s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/hook/cmake_prefix_path.sh'
+[1.826s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_coverage/lib'
+[1.827s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_coverage', 'ld_library_path_lib')
+[1.830s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/hook/ld_library_path_lib.ps1'
+[1.830s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/hook/ld_library_path_lib.dsv'
+[1.831s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/hook/ld_library_path_lib.sh'
+[1.831s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_coverage/bin'
+[1.831s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_coverage/lib/pkgconfig/create3_coverage.pc'
+[1.832s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_coverage/lib/python3.8/site-packages'
+[1.832s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_coverage/bin'
+[1.836s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/package.ps1'
+[1.836s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/package.dsv'
+[1.837s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/package.sh'
+[1.838s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/package.bash'
+[1.838s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/package.zsh'
+[1.839s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/awasch/work/src/create3_examples/install/create3_coverage/share/colcon-core/packages/create3_coverage)
+[1.921s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create3_coverage)
+[1.925s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_coverage' for CMake module files
+[1.926s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_coverage' for CMake config files
+[1.927s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_coverage', 'cmake_prefix_path')
+[1.929s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/hook/cmake_prefix_path.ps1'
+[1.930s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/hook/cmake_prefix_path.dsv'
+[1.931s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/hook/cmake_prefix_path.sh'
+[1.932s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_coverage/lib'
+[1.932s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_coverage', 'ld_library_path_lib')
+[1.935s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/hook/ld_library_path_lib.ps1'
+[1.935s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/hook/ld_library_path_lib.dsv'
+[1.936s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/hook/ld_library_path_lib.sh'
+[1.937s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_coverage/bin'
+[1.937s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_coverage/lib/pkgconfig/create3_coverage.pc'
+[1.937s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_coverage/lib/python3.8/site-packages'
+[1.938s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_coverage/bin'
+[1.940s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/package.ps1'
+[1.941s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/package.dsv'
+[1.942s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/package.sh'
+[1.943s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/package.bash'
+[1.943s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_coverage/share/create3_coverage/package.zsh'
+[1.944s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/awasch/work/src/create3_examples/install/create3_coverage/share/colcon-core/packages/create3_coverage)
+[2.154s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_teleop' for CMake module files
+[2.155s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/awasch/work/src/create3_examples/create3_teleop' returned '0': PYTHONPATH=/home/awasch/work/src/create3_examples/install/create3_teleop/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/create3_teleop build --build-base /home/awasch/work/src/create3_examples/build/create3_teleop/build install --prefix /home/awasch/work/src/create3_examples/install/create3_teleop --record /home/awasch/work/src/create3_examples/build/create3_teleop/install.log --single-version-externally-managed
+[2.156s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_teleop' for CMake config files
+[2.157s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_teleop/lib'
+[2.157s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_teleop/bin'
+[2.157s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_teleop/lib/pkgconfig/create3_teleop.pc'
+[2.157s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_teleop/lib/python3.8/site-packages'
+[2.157s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_teleop', 'pythonpath')
+[2.160s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_teleop/share/create3_teleop/hook/pythonpath.ps1'
+[2.160s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/awasch/work/src/create3_examples/install/create3_teleop/share/create3_teleop/hook/pythonpath.dsv'
+[2.161s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_teleop/share/create3_teleop/hook/pythonpath.sh'
+[2.162s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_teleop/bin'
+[2.162s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create3_teleop)
+[2.164s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_teleop/share/create3_teleop/package.ps1'
+[2.165s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/awasch/work/src/create3_examples/install/create3_teleop/share/create3_teleop/package.dsv'
+[2.166s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_teleop/share/create3_teleop/package.sh'
+[2.167s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_teleop/share/create3_teleop/package.bash'
+[2.167s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_teleop/share/create3_teleop/package.zsh'
+[2.168s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/awasch/work/src/create3_examples/install/create3_teleop/share/colcon-core/packages/create3_teleop)
+[2.249s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_py' for CMake module files
+[2.250s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/awasch/work/src/create3_examples/create3_examples_py' returned '0': PYTHONPATH=/home/awasch/work/src/create3_examples/install/create3_examples_py/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/create3_examples_py build --build-base /home/awasch/work/src/create3_examples/build/create3_examples_py/build install --prefix /home/awasch/work/src/create3_examples/install/create3_examples_py --record /home/awasch/work/src/create3_examples/build/create3_examples_py/install.log --single-version-externally-managed
+[2.251s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_py' for CMake config files
+[2.252s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_py/lib'
+[2.252s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_py/bin'
+[2.253s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_py/lib/pkgconfig/create3_examples_py.pc'
+[2.253s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_py/lib/python3.8/site-packages'
+[2.253s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_examples_py', 'pythonpath')
+[2.256s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_examples_py/share/create3_examples_py/hook/pythonpath.ps1'
+[2.256s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/awasch/work/src/create3_examples/install/create3_examples_py/share/create3_examples_py/hook/pythonpath.dsv'
+[2.257s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/awasch/work/src/create3_examples/install/create3_examples_py/share/create3_examples_py/hook/pythonpath.sh'
+[2.258s] Level 1:colcon.colcon_core.environment:checking '/home/awasch/work/src/create3_examples/install/create3_examples_py/bin'
+[2.258s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create3_examples_py)
+[2.261s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_examples_py/share/create3_examples_py/package.ps1'
+[2.261s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/awasch/work/src/create3_examples/install/create3_examples_py/share/create3_examples_py/package.dsv'
+[2.262s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_examples_py/share/create3_examples_py/package.sh'
+[2.263s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_examples_py/share/create3_examples_py/package.bash'
+[2.263s] INFO:colcon.colcon_core.shell:Creating package script '/home/awasch/work/src/create3_examples/install/create3_examples_py/share/create3_examples_py/package.zsh'
+[2.264s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/awasch/work/src/create3_examples/install/create3_examples_py/share/colcon-core/packages/create3_examples_py)
+[2.264s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.265s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.265s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.265s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.278s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.278s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.278s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.300s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.302s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/awasch/work/src/create3_examples/install/local_setup.ps1'
+[2.304s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/awasch/work/src/create3_examples/install/_local_setup_util_ps1.py'
+[2.306s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/awasch/work/src/create3_examples/install/setup.ps1'
+[2.310s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/awasch/work/src/create3_examples/install/local_setup.sh'
+[2.311s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/awasch/work/src/create3_examples/install/_local_setup_util_sh.py'
+[2.311s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/awasch/work/src/create3_examples/install/setup.sh'
+[2.314s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/awasch/work/src/create3_examples/install/local_setup.bash'
+[2.315s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/awasch/work/src/create3_examples/install/setup.bash'
+[2.317s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/awasch/work/src/create3_examples/install/local_setup.zsh'
+[2.318s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/awasch/work/src/create3_examples/install/setup.zsh'

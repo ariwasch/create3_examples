@@ -17,6 +17,7 @@ from geometry_msgs.msg import Twist
 from irobot_create_msgs.msg import LedColor
 from irobot_create_msgs.msg import LightringLeds
 
+
 class ColorPalette():
     """ Helper Class to define frequently used colors"""
     def __init__(self):
@@ -30,76 +31,14 @@ class ColorPalette():
         self.white = LedColor(red=255,green=255,blue=255)
         self.grey = LedColor(red=189,green=189,blue=189)
 
-class Move():
-    """ Class to tell the robot to move as part of dance sequence"""
-    def __init__(self, x_m_s, theta_degrees_second):
-        """
-        Parameters
-        ----------
-        x_m_s : float
-            The speed to drive the robot forward (positive) /backwards (negative) in m/s    
-        theta_degrees_second : float
-            The speed to rotate the robot counter clockwise (positive) / clockwise (negative) in deg/s
-        """
-        self.x = x_m_s
-        self.theta = math.radians(theta_degrees_second)
-
-class Lights():
-    """ Class to tell the robot to set lightring lights as part of dance sequence"""
-    def __init__(self, led_colors):
-        """
-        Parameters
-        ----------
-        led_colors : list of LedColor
-            The list of 6 LedColors corresponding to the 6 LED lights on the lightring
-        """
-        self.led_colors = led_colors
-
 class FinishedDance(Exception):
     """ Class to tell the robot dance sequence has finished"""
     pass
 
-class DanceChoreographer():
-    """ Class to manage a dance sequence, returning current actions to perform"""
-    def __init__(self, dance_sequence):
-        '''
-        Parameters
-        ----------
-        dance_sequence : list of (time, action) pairs
-            The time is time since start_dance was called to initiate action,
-            the action is one of the classes above [Move,Lights,FinishedDance]
-        '''    
-        self.dance_sequence = dance_sequence
-        self.action_index = 0
-
-    def start_dance(self, time):
-        '''
-        Parameters
-        ----------
-        time : rclpy::Time
-            The ROS 2 time to mark the start of the sequence
-        '''    
-        self.start_time = time
-        self.action_index = 0
-
-    def get_next_actions(self, time):
-        '''
-        Parameters
-        ----------
-        time : rclpy::Time
-            The ROS 2 time to compare against start time to give actions that should be applied given how much time sequence has been running for
-        '''    
-        time_into_dance = time - self.start_time
-        time_into_dance_seconds = time_into_dance.nanoseconds / float(1e9)
-        actions = []
-        while self.action_index < len(self.dance_sequence) and time_into_dance_seconds >= self.dance_sequence[self.action_index][0]:
-            actions.append(self.dance_sequence[self.action_index][1])
-            self.action_index += 1
-        return actions
 
 class DanceCommandPublisher(Node):
     """ Class to publish actions produced by the DanceChoreographer"""
-    def __init__(self, dance_choreographer):
+    def __init__(self):
         '''
         Parameters
         ----------
@@ -107,7 +46,6 @@ class DanceCommandPublisher(Node):
             The configured DanceChoreographer to give time and query for actions to publish
         '''    
         super().__init__('dance_command_publisher')
-        self.dance_choreographer = dance_choreographer
         self.lights_publisher = self.create_publisher(LightringLeds, 'cmd_lightring', 10)
         self.vel_publisher = self.create_publisher(Twist, 'cmd_vel', 10)
         
@@ -137,20 +75,11 @@ class DanceCommandPublisher(Node):
             try:
 
                 move_cmd = Twist()
-
-            # value = input("s")
-            # self.get_logger().info(x)
-
                 move_cmd.linear.x =  msg.axes[3]
                 move_cmd.angular.z = msg.axes[2] * 10
-
-
-
-            # self.get_logger().info('Time %f New move action: %f, %f' % (current_time.nanoseconds / float(1e9), move_cmd.linear.x, move_cmd.angular.z))
-
                 self.vel_publisher.publish(move_cmd)
 
-                self.get_logger().info('I heard: "2222%s"' % msg.axes[2])
+                # self.get_logger().info('I heard: "2222%s"' % msg.axes[2])
 
             except Exception as e:
                 self.get_logger().info('Set Params Service call failed %r' % (e,))
@@ -175,7 +104,7 @@ class DanceCommandPublisher(Node):
                 # Finished trying to set parameters, start dance sequence
                 self.ready = True
                 self.get_logger().info('Finished params set, start dance at time %f' % (current_time.nanoseconds / float(1e9)))
-                self.dance_choreographer.start_dance(current_time)
+                # self.dance_choreographer.start_dance(current_time)
             # Check is subscribers are ready
             elif self.vel_publisher.get_subscription_count() > 0 and self.lights_publisher.get_subscription_count() > 0:
                 self.get_logger().info('Subscribers connected, send safety_override param at time %f' % (current_time.nanoseconds / float(1e9)))
@@ -192,6 +121,19 @@ class DanceCommandPublisher(Node):
         # get actions from dance_choreographer given time
         # next_actions = self.dance_choreographer.get_next_actions(current_time)
         # twist = self.last_twist
+
+        try:
+
+            cp = ColorPalette()
+            LEDs = LightringLeds()
+            LEDs.override_system = True
+            LEDs.leds = [cp.blue, cp.purple, cp.blue, cp.purple, cp.blue, cp.purple]
+            self.lights_publisher.publish(LEDs)
+
+                # self.get_logger().info('I heard: "2222%s"' % msg.axes[2])
+
+        except Exception as e:
+            self.get_logger().info('Set Params Service call failed %r' % (e,))
 
         # try:
         #     filedescriptors = termios.tcgetattr(sys.stdin)
