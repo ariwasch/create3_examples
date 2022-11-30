@@ -7,6 +7,8 @@ Send any of the following through serial:
   * "pull!"
   * "connect!"
   * "disconnect!"
+  * "press!"
+  * "release!"
   * "test!" (temorary - turns on LED)
 */
 
@@ -21,17 +23,21 @@ Send any of the following through serial:
 #define ROLLER_2_SPD 6
 
 // Elevator
-#define ELEVATOR_UP 7
-#define ELEVATOR_DOWN 8
-#define ELEVATOR_SPD 9
-#define PEG_CONNECTOR 10
+#define ELEVATOR_1_UP 7
+#define ELEVATOR_1_DOWN 8
+#define ELEVATOR_1_SPD 9
+#define ELEVATOR_2_UP 10
+#define ELEVATOR_2_DOWN 11
+#define ELEVATOR_2_SPD 12
+#define PEG_CONNECTOR 14
 
 // Limit switches
-#define TOP_LIMIT 11
-#define BOTTOM_LIMIT 12
+#define TOP_LIMIT 15
+#define BOTTOM_LIMIT 16
 
 // Linear actuator
-#define ACTUATOR 13
+#define ACTUATOR_DOWN 17
+#define ACTUATOR_UP 18
 
 // Peg connector
 Servo pegConnector;
@@ -42,12 +48,20 @@ void setup() {
   pinMode(BOTTOM_LIMIT, INPUT);
   
   // Outputs
-  pinMode(ROLLER_IN, OUTPUT);
-  pinMode(ROLLER_OUT, OUTPUT);
-  pinMode(ROLLER_SPD, OUTPUT);
-  pinMode(ELEVATOR_UP, OUTPUT);
-  pinMode(ELEVATOR_DOWN, OUTPUT);
-  pinMode(ELEVATOR_SPD, OUTPUT);
+  pinMode(ROLLER_1_IN, OUTPUT);
+  pinMode(ROLLER_1_OUT, OUTPUT);
+  pinMode(ROLLER_1_SPD, OUTPUT);
+  pinMode(ROLLER_2_IN, OUTPUT);
+  pinMode(ROLLER_2_OUT, OUTPUT);
+  pinMode(ROLLER_2_SPD, OUTPUT);
+  pinMode(ELEVATOR_1_UP, OUTPUT);
+  pinMode(ELEVATOR_1_DOWN, OUTPUT);
+  pinMode(ELEVATOR_1_SPD, OUTPUT);
+  pinMode(ELEVATOR_2_UP, OUTPUT);
+  pinMode(ELEVATOR_2_DOWN, OUTPUT);
+  pinMode(ELEVATOR_2_SPD, OUTPUT);
+  pinMode(ACTUATOR_DOWN, OUTPUT);
+  pinMode(ACTUATOR_UP, OUTPUT);
 
   // Servo
   pegConnector.attach(PEG_CONNECTOR);
@@ -68,6 +82,8 @@ void handleMessage(String message) {
     if (message == "pull") intake(false);
     if (message == "conn") peg(true);
     if (message == "disconn") peg(false);
+    if (message == "press") actuate(true);
+    if (message == "release") actuate(false);
     if (message == "test") { // delete if successful
       digitalWrite(LED_BUILTIN, 1);
       delay(1000);
@@ -77,9 +93,13 @@ void handleMessage(String message) {
 
 void lift(bool up) {
     if (!digitalRead(up ? TOP_LIMIT : BOTTOM_LIMIT)) {
-        digitalWrite(ELEVATOR_UP, up);
-        digitalWrite(ELEVATOR_DOWN, !up);
-        digitalWrite(ELEVATOR_SPD, 255);
+        digitalWrite(ELEVATOR_1_UP, up);
+        digitalWrite(ELEVATOR_1_DOWN, !up);
+        digitalWrite(ELEVATOR_1_SPD, 255);
+
+        digitalWrite(ELEVATOR_2_UP, up);
+        digitalWrite(ELEVATOR_2_DOWN, !up);
+        digitalWrite(ELEVATOR_2_SPD, 255);
     }
 }
 
@@ -95,4 +115,9 @@ void intake(bool pull) {
 
 void peg(bool conn) {
     pegConnector.write(conn ? 180 : 90);
+}
+
+void actuate(bool down) {
+  digitalWrite(ACTUATOR_DOWN, down);
+  digitalWrite(ACTUATOR_UP, !down);
 }
