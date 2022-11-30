@@ -88,7 +88,8 @@ class DanceCommandPublisher(Node):
 
                 self.get_logger().info('I heard: "2222%s"' % msg.axes[2])
                 
-                msgs = ['lift!', 'lower!', 'push!', 'pull!', 'connect!', 'disconnect!', 'press!', 'release!']
+                """msgs = ['lift!', 'lower!', 'push!', 'pull!', 'connect!', 'disconnect!', 'press!', 'release!']"""
+                msgs = ['test!', 'test!', 'test!', 'test!', 'test!', 'test!']
                 for i in range(len(msgs)):
                     if (buttons[i]): self.client.send(bytes(msgs[i], 'utf-8'))
 
