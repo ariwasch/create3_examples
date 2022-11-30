@@ -61,6 +61,8 @@ void setup() {
   pinMode(ELEVATOR_2_SPD, OUTPUT);
   pinMode(ACTUATOR_DOWN, OUTPUT);
   pinMode(ACTUATOR_UP, OUTPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, 0);
 
   // Servo
   pegConnector.attach(PEG_CONNECTOR);
