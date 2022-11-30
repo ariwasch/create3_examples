@@ -7,6 +7,7 @@ Send any of the following through serial:
   * "pull!"
   * "connect!"
   * "disconnect!"
+  * "test!" (temorary - turns on LED)
 */
 
 #include <Servo.h>
@@ -51,7 +52,7 @@ void setup() {
   // Servo
   pegConnector.attach(PEG_CONNECTOR);
 
-  Serial.begin(115200); // can delete when done with testing?
+  Serial.begin(115200);
 }
 
 void loop() {
@@ -67,6 +68,11 @@ void handleMessage(String message) {
     if (message == "pull") intake(false);
     if (message == "conn") peg(true);
     if (message == "disconn") peg(false);
+    if (message == "test") { // delete if successful
+      digitalWrite(LED_BUILTIN, 1);
+      delay(1000);
+      digitalWrite(LED_BUILTIN, 0);
+    }
 }
 
 void lift(bool up) {
