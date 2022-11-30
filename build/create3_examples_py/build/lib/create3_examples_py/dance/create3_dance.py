@@ -7,7 +7,6 @@ from sensor_msgs.msg import Joy
 from rclpy.node import Node
 
 class MinimalSubscriber(Node):
-
     def __init__(self):
         super().__init__('minimal_subscriber')
         self.subscription = self.create_subscription(

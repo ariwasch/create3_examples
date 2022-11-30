@@ -18,10 +18,9 @@ from geometry_msgs.msg import Twist
 from irobot_create_msgs.msg import LedColor
 from irobot_create_msgs.msg import LightringLeds
 
-import socket
+import serial
 
-IP = "INSERT IP HERE" # DO IT!
-PORT = 8883
+PORT = '/tmp/vmodem0'
 
 class ColorPalette():
     """ Helper Class to define frequently used colors"""
@@ -74,11 +73,9 @@ class DanceCommandPublisher(Node):
         while not self.params_cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
 
-        self.client = socket.socket(self.AF_INET, socket.SOCK_STREAM)
-        self.client.connect(IP, PORT)
+        self.ser = serial.Serial(PORT)
 
     def listener_callback(self, msg):
-
             try:
 
                 move_cmd = Twist()
@@ -90,7 +87,7 @@ class DanceCommandPublisher(Node):
                 
                 msgs = ['lift!', 'lower!', 'push!', 'pull!', 'connect!', 'disconnect!', 'press!', 'release!']
                 for i in range(len(msgs)):
-                    if (buttons[i]): self.client.send(bytes(msgs[i], 'utf-8'))
+                    if (msg.buttons[i]): self.ser.write(bytes(msgs[i], 'utf-8'))
 
             except Exception as e:
                 self.get_logger().info('Set Params Service call failed %r' % (e,))
@@ -216,3 +213,53 @@ class DanceCommandPublisher(Node):
         req = SetParameters.Request()
         req.parameters = [Parameter(name='safety_override', value=safety_override)]
         self.params_future = self.params_cli.call_async(req)
+
+class TCPserver():
+    '''
+    this class creates the TCP server that will read serial information in from a port on the robot
+    '''
+    def __init__(self,IP,PORT):
+        '''
+        first we need to create a socket that the robot can connect to
+        '''
+        try:
+            self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        except socket.error:
+            print('Failed to create socket')
+            sys.exit()
+
+        print('Socket Created')
+
+        '''
+        Connect the socket object to the robot using IP address (string) and port (int)
+        '''
+        self.client.connect((IP,PORT))
+        print('Socket Connected to ' + "sss")
+	
+    def read(self):
+        '''
+        Read the response sent by robot upon connecting. This message will be the serial data sent in by
+        what is connected to the port. 
+        '''
+        try:
+            msg = self.client.recv(1024).decode('ascii')
+        except socket.error:
+            print('Failed to read data')
+        return msg
+
+    def write(self,string):
+        '''
+        we can write serial data to the port as well using this function
+        '''
+        try:
+            self.client.send(bytes(string.encode()))
+        except socket.error:
+            print('Failed to send data')
+
+    def close(self):
+        '''
+        this function will close the socket when we are done with it
+        '''
+        self.client.close()
+
+
