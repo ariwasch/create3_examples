@@ -85,10 +85,8 @@ class DanceCommandPublisher(Node):
 
                 self.get_logger().info('I heard: "2222%s"' % msg.axes[2])
                 
-                """msgs = ['lift!', 'lower!', 'push!', 'pull!', 'connect!', 'disconnect!', 'press!', 'release!']"""
-                msgs = ['test!', 'test!', 'test!', 'test!', 'test!', 'test!']
-                for i in range(len(msgs)):
-                    if (msg.buttons[i]): self.ser.write(bytes(msgs[i], 'utf-8'))
+                first_8 = msgs.buttons[:8]
+                ser.write(sum(v<<i for i, v in enumerate(first_8[::-1])))
 
             except Exception as e:
                 self.get_logger().info('Set Params Service call failed %r' % (e,))
