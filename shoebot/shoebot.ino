@@ -1,15 +1,14 @@
 /*
 USAGE:
-Send any of the following through serial:
-  * "lift!"
-  * "lower!"
-  * "push!"
-  * "pull!"
-  * "connect!"
-  * "disconnect!"
-  * "press!"
-  * "release!"
-  * "test!" (temorary - turns on LED)
+Send a byte through serial (XXXXXXXX):
+  * Bit 0 (rightmost): lift elevator
+  * Bit 1: lower elevator
+  * Bit 2: push shoe
+  * Bit 3: pull shoe
+  * Bit 4: connect peg
+  * Bit 5: release peg
+  * Bit 6: lower actuator
+  * Bit 7: lift actuator
 */
 
 #include <Servo.h>
@@ -70,25 +69,18 @@ void setup() {
 }
 
 void loop() {
-  if (Serial.available()) handleMessage(Serial.readStringUntil('!'));
+  if (Serial.available()) handleMessage(Serial.read());
 }
 
-void handleMessage(String message) {
-    Serial.println(message);
-  
-    if (message == "lift") lift(true);
-    if (message == "lower") lift(false);
-    if (message == "push") intake(true);
-    if (message == "pull") intake(false);
-    if (message == "conn") peg(true);
-    if (message == "disconn") peg(false);
-    if (message == "press") actuate(true);
-    if (message == "release") actuate(false);
-    if (message == "test") { // delete if successful
-      digitalWrite(LED_BUILTIN, 1);
-      delay(1000);
-      digitalWrite(LED_BUILTIN, 0);
-    }
+void handleMessage(byte message) {
+    if (bitRead(message, 0)) lift(true);
+    if (bitRead(message, 1)) lift(false);
+    if (bitRead(message, 2)) intake(true);
+    if (bitRead(message, 3)) intake(false);
+    if (bitRead(message, 4)) peg(true);
+    if (bitRead(message, 5)) peg(false);
+    if (bitRead(message, 6)) actuate(true);
+    if (bitRead(message, 7)) actuate(false);
 }
 
 void lift(bool up) {
