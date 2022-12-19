@@ -14,29 +14,28 @@ Send a byte through serial (XXXXXXXX):
 #include <Servo.h>
 
 // Rollers
-#define ROLLER_1_IN 1
-#define ROLLER_1_OUT 2
-#define ROLLER_1_SPD 3
-#define ROLLER_2_IN 4
-#define ROLLER_2_OUT 5
-#define ROLLER_2_SPD 6
+#define ROLLER_1_IN 2
+#define ROLLER_1_OUT 56
+#define ROLLER_1_SPD 57
+#define ROLLER_2_IN 53
+#define ROLLER_2_OUT 54
+#define ROLLER_2_SPD 55
 
 // Elevator
-#define ELEVATOR_1_UP 7
-#define ELEVATOR_1_DOWN 8
-#define ELEVATOR_1_SPD 9
-#define ELEVATOR_2_UP 10
-#define ELEVATOR_2_DOWN 11
-#define ELEVATOR_2_SPD 12
-#define PEG_CONNECTOR 14
+#define ELEVATOR_1_DIR 4
+#define ELEVATOR_1_SPD 3
+#define ELEVATOR_2_DIR 50
+#define ELEVATOR_2_SPD 51
+#define PEG_CONNECTOR 52
 
 // Limit switches
-#define TOP_LIMIT 15
-#define BOTTOM_LIMIT 16
+#define TOP_LIMIT 14
+#define BOTTOM_LIMIT 15
 
 // Linear actuator
-#define ACTUATOR_DOWN 17
-#define ACTUATOR_UP 18
+#define ACTUATOR_DOWN 7
+#define ACTUATOR_UP 6
+#define ACTUATOR_SPD 5
 
 // Peg connector
 Servo pegConnector;
@@ -53,17 +52,21 @@ void setup() {
   pinMode(ROLLER_2_IN, OUTPUT);
   pinMode(ROLLER_2_OUT, OUTPUT);
   pinMode(ROLLER_2_SPD, OUTPUT);
-  pinMode(ELEVATOR_1_UP, OUTPUT);
-  pinMode(ELEVATOR_1_DOWN, OUTPUT);
+  pinMode(ELEVATOR_1_DIR, OUTPUT);
   pinMode(ELEVATOR_1_SPD, OUTPUT);
-  pinMode(ELEVATOR_2_UP, OUTPUT);
-  pinMode(ELEVATOR_2_DOWN, OUTPUT);
+  pinMode(ELEVATOR_2_DIR, OUTPUT);
   pinMode(ELEVATOR_2_SPD, OUTPUT);
   pinMode(ACTUATOR_DOWN, OUTPUT);
   pinMode(ACTUATOR_UP, OUTPUT);
+  pinMode(ACTUATOR_SPD, OUTPUT);
 
   // Servo
   pegConnector.attach(PEG_CONNECTOR);
+
+  // Set speeds for motors
+  analogWrite(ROLLER_1_SPD, 255);
+  analogWrite(ROLLER_2_SPD, 255);
+  analogWrite(ACTUATOR_SPD, 255);
 
   Serial.begin(115200);
 }
@@ -73,43 +76,49 @@ void loop() {
 }
 
 void handleMessage(byte message) {
-    if (bitRead(message, 0)) lift(true);
-    if (bitRead(message, 1)) lift(false);
-    if (bitRead(message, 2)) intake(true);
-    if (bitRead(message, 3)) intake(false);
-    if (bitRead(message, 4)) peg(true);
-    if (bitRead(message, 5)) peg(false);
-    if (bitRead(message, 6)) actuate(true);
-    if (bitRead(message, 7)) actuate(false);
+    // lift
+    if (bitRead(message, 0)) lift(1, 255);
+    else if (bitRead(message, 1)) lift(0, 255);
+    else lift(0, 0);
+
+    // intake
+    if (bitRead(message, 2)) intake(1, 0);
+    else if (bitRead(message, 3)) intake(0, 1);
+    else intake(0, 0);
+
+    // peg
+    if (bitRead(message, 4)) peg(1);
+    else if (bitRead(message, 5)) peg(0);
+
+    // linear actuator
+    if (bitRead(message, 6)) actuate(1, 0);
+    else if (bitRead(message, 7)) actuate(0, 1);
+    else actuate(0, 0);
 }
 
-void lift(bool up) {
+void lift(bool up, byte spd) {
     if (!digitalRead(up ? TOP_LIMIT : BOTTOM_LIMIT)) {
-        digitalWrite(ELEVATOR_1_UP, up);
-        digitalWrite(ELEVATOR_1_DOWN, !up);
-        digitalWrite(ELEVATOR_1_SPD, 255);
-
-        digitalWrite(ELEVATOR_2_UP, up);
-        digitalWrite(ELEVATOR_2_DOWN, !up);
-        digitalWrite(ELEVATOR_2_SPD, 255);
+      analogWrite(ELEVATOR_1_SPD, spd);
+      digitalWrite(ELEVATOR_1_DIR, up);
+      
+      analogWrite(ELEVATOR_2_SPD, spd);
+      digitalWrite(ELEVATOR_2_DIR, up);
     }
 }
 
-void intake(bool pull) {
+void intake(bool pull, bool push) {
     digitalWrite(ROLLER_1_IN, pull);
-    digitalWrite(ROLLER_1_OUT, !pull);
-    analogWrite(ROLLER_1_SPD, 255);
+    digitalWrite(ROLLER_1_OUT, push);
 
     digitalWrite(ROLLER_2_IN, pull);
-    digitalWrite(ROLLER_2_OUT, !pull);
-    analogWrite(ROLLER_2_SPD, 255);
+    digitalWrite(ROLLER_2_OUT, push);
 }
 
 void peg(bool conn) {
     pegConnector.write(conn ? 180 : 90);
 }
 
-void actuate(bool down) {
-  digitalWrite(ACTUATOR_DOWN, down);
-  digitalWrite(ACTUATOR_UP, !down);
+void actuate(bool prs, bool rls) {
+  digitalWrite(ACTUATOR_DOWN, prs);
+  digitalWrite(ACTUATOR_UP, rls);
 }
