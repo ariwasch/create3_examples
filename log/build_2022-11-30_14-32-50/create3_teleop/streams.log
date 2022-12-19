@@ -1,0 +1,17 @@
+[1.714s] Invoking command in '/home/awasch/work/src/create3_examples/create3_teleop': PYTHONPATH=/home/awasch/work/src/create3_examples/install/create3_teleop/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/create3_teleop build --build-base /home/awasch/work/src/create3_examples/build/create3_teleop/build install --prefix /home/awasch/work/src/create3_examples/install/create3_teleop --record /home/awasch/work/src/create3_examples/build/create3_teleop/install.log --single-version-externally-managed
+[2.088s] running egg_info
+[2.089s] writing ../build/create3_teleop/create3_teleop.egg-info/PKG-INFO
+[2.089s] writing dependency_links to ../build/create3_teleop/create3_teleop.egg-info/dependency_links.txt
+[2.090s] writing requirements to ../build/create3_teleop/create3_teleop.egg-info/requires.txt
+[2.090s] writing top-level names to ../build/create3_teleop/create3_teleop.egg-info/top_level.txt
+[2.097s] reading manifest file '../build/create3_teleop/create3_teleop.egg-info/SOURCES.txt'
+[2.097s] writing manifest file '../build/create3_teleop/create3_teleop.egg-info/SOURCES.txt'
+[2.098s] running build
+[2.098s] running install
+[2.099s] running install_data
+[2.099s] running install_egg_info
+[2.103s] removing '/home/awasch/work/src/create3_examples/install/create3_teleop/lib/python3.8/site-packages/create3_teleop-0.0.1-py3.8.egg-info' (and everything under it)
+[2.103s] Copying ../build/create3_teleop/create3_teleop.egg-info to /home/awasch/work/src/create3_examples/install/create3_teleop/lib/python3.8/site-packages/create3_teleop-0.0.1-py3.8.egg-info
+[2.106s] running install_scripts
+[2.130s] writing list of installed files to '/home/awasch/work/src/create3_examples/build/create3_teleop/install.log'
+[2.162s] Invoked command in '/home/awasch/work/src/create3_examples/create3_teleop' returned '0': PYTHONPATH=/home/awasch/work/src/create3_examples/install/create3_teleop/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/create3_teleop build --build-base /home/awasch/work/src/create3_examples/build/create3_teleop/build install --prefix /home/awasch/work/src/create3_examples/install/create3_teleop --record /home/awasch/work/src/create3_examples/build/create3_teleop/install.log --single-version-externally-managed

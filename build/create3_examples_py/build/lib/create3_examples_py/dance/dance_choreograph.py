@@ -73,7 +73,7 @@ class DanceCommandPublisher(Node):
         while not self.params_cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
 
-        self.ser = serial.Serial(PORT)
+        self.ser = serial.Serial(PORT, baudrate=115200)
 
     def listener_callback(self, msg):
             try:
@@ -85,9 +85,10 @@ class DanceCommandPublisher(Node):
 
                 self.get_logger().info('I heard: "2222%s"' % msg.axes[2])
                 
-                msgs = ['lift!', 'lower!', 'push!', 'pull!', 'connect!', 'disconnect!', 'press!', 'release!']
-                for i in range(len(msgs)):
-                    if (msg.buttons[i]): self.ser.write(bytes(msgs[i], 'utf-8'))
+                first_8 = msg.buttons[:8]
+                print(sum(v<<i for i, v in enumerate(first_8[::-1])))
+                byte_message = sum(v<<i for i, v in enumerate(first_8[::-1]))
+                self.ser.write(bytes([byte_message]))
 
             except Exception as e:
                 self.get_logger().info('Set Params Service call failed %r' % (e,))
@@ -209,9 +210,10 @@ class DanceCommandPublisher(Node):
 
     # Set safety_override to backup_only so robot can backup during dance sequence
     def send_params_request(self):
-        safety_override = ParameterValue(type=ParameterType.PARAMETER_STRING, string_value="backup_only")
+        safety_override = ParameterValue(type=ParameterType.PARAMETER_STRING, string_value="full")
+        reflex_override = ParameterValue(type=ParameterType.PARAMETER_BOOL, bool_value=False)
         req = SetParameters.Request()
-        req.parameters = [Parameter(name='safety_override', value=safety_override)]
+        req.parameters = [Parameter(name='safety_override', value=safety_override), Parameter(name='reflexes_enabled', value=reflex_override)]
         self.params_future = self.params_cli.call_async(req)
 
 class TCPserver():
