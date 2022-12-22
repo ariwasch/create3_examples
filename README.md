@@ -99,6 +99,11 @@ ros2 run create3_examples_py create3_dance
 ```
 
 ### Connect to an Arduino through the Create3
+
+Go to ROBOT_IP/serial-config in a web browser. Then change the external port number to 8883 as seen in the image below. Click save, and then power cycle the robot.
+![serial-config image](https://github.com/ariwasch/create3_examples/blob/galactic/serial-config.PNG?raw=true)
+
+
 Put the Create3 in USB mode by flipping the switch from Bluetooth to USB. Then, plug the Arduino into the Create3 USB port using a USB adapter. Open the terminal and run the following. Make sure to replace ROBOT_IP with the IP of the Create3.
 ```sh
 socat PTY,link=/tmp/vmodem0,rawer,wait-slave,echo=0 TCP:ROBOT_IP:8883
